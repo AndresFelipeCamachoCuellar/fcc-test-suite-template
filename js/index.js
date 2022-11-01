@@ -26,3 +26,20 @@ INSTRUCTIONS:
 
 // Once you have read the above messages, you can delete all comments. 
 "use strict";
+
+function ValidateEmail(){
+  var txtEmail = document.getElementById("inpEmail").value;
+  const re = /\S+@\S+\.\S+/;
+  if(re.test(txtEmail)){
+    document.getElementById("txtErrorEmail").style.display = "none";
+    return true;
+  }else{
+    document.getElementById("txtErrorEmail").style.display = "block";
+    return false;
+  }
+}
+
+function validateEmail(email) {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(email);
+}
